@@ -1,6 +1,6 @@
 {
   "name": "nengi-ws-client-adapter",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "ws adapter for nengi client",
   "main": "./build/index.js",
   "scripts": {
@@ -17,8 +17,8 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "nengi": "github:timetocode/nengi#nengi2-experimental",
-    "nengi-buffers": "^0.3.0",
+    "nengi": "^2.0.0-alpha.8",
+    "nengi-buffers": "^0.4.0",
     "ws": "^8.12.0"
   }
 }
