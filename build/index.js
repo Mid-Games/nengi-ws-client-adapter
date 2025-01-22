@@ -15,11 +15,9 @@ class WsClientAdapter {
     }
     flush() {
         if (!this.socket) {
-            console.log('CANCELED, no socket');
             return;
         }
         if (this.socket.readyState !== ws_1.default.OPEN) {
-            console.log('socket not open');
             return;
         }
         const buffer = this.network.createOutboundBuffer(nengi_buffers_1.BufferWriter);
@@ -33,13 +31,9 @@ class WsClientAdapter {
             this.network.readSnapshot(dr);
         });
         socket.onclose = function (event) {
-            console.log('sock closed');
-            console.log(event);
             // TODO
         };
         socket.onerror = function (event) {
-            console.log('socket error');
-            console.log(event);
             // TODO
         };
     }
