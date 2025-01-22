@@ -31,10 +31,12 @@ class WsClientAdapter {
             this.network.readSnapshot(dr);
         });
         socket.onclose = function (event) {
-            // TODO
+            console.error('Socket Closed. Event:', event);
+            throw new Error('Socket disconnected');
         };
         socket.onerror = function (event) {
-            // TODO
+            console.error('Socket Error. Event:', event);
+            throw new Error('Socket closed due to error');
         };
     }
     connect(wsUrl, handshake) {
